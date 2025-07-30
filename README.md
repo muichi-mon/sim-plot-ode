@@ -7,7 +7,7 @@ A simple Java project for **Dynamic Systems Modelling**, simulation, and plottin
 ## ✨ Features
 
 - Define custom ODE systems easily
-- Simulate them using the RK4 solver (Runge–Kutta 4th Order)
+- Simulate them using multiple solvers, including Euler and RK4 (Runge–Kutta 4th Order)
 - Visualize time-series trajectories using JavaFX Line Charts
 - Includes built-in systems like:
   - FitzHugh-Nagumo neuron model
