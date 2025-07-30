@@ -40,4 +40,12 @@ A simple Java project for **Dynamic Systems Modelling**, simulation, and plottin
 ```bash
 git clone https://github.com/muichi-mon/sim-plot-ode.git
 cd sim-plot-ode
+```
 
+## Example Output
+
+### Lotka-Volterra Simulation
+![Lotka-Volterra Plot](src/main/resources/io/github/rajveer/simplotode/images/lotka-volterra-plot.png)
+
+### SIR Epidemiological Model
+![SIR Plot](src/main/resources/io/github/rajveer/simplotode/images/sir-plot.png)

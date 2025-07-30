@@ -5,30 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6608fd36-3a9d-48d1-9d8d-4271b28ab7ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/ode/EulerSolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/ode/ODESolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/ode/RK4Solver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/simulations/FitzHughNagumoSim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/simulations/LotkaVolterraSim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/simulations/SIRSim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/systems/FitzHughNagumoSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/systems/LotkaVolterraSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/systems/ODESystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/systems/SIRModelSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/utils/Figure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/utils/Vector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +16,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "muichi-mon"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/muichi-mon/sim-plot-ode.git",
+    "accountId": "82bf0ce4-dfce-4dd2-9271-72d35a1afb09"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -56,6 +46,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.FitzHughNagumoSim.executor": "Run",
+    "Application.LotkaVolterraSim.executor": "Run",
     "Application.SIRSim.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
