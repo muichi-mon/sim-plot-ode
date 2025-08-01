@@ -10,8 +10,9 @@ A simple Java project for **Dynamic Systems Modelling**, simulation, and plottin
 - Simulate them using multiple solvers, including Euler and RK4 (Runge–Kutta 4th Order)
 - Visualize time-series trajectories using JavaFX Line Charts
 - Includes built-in systems like:
-  - FitzHugh-Nagumo neuron model
-  - SIR epidemiological model
+    - Solar System Model (N-Body Simulation)
+    - FitzHugh-Nagumo neuron model
+    - SIR epidemiological model
 
 ---
 
@@ -51,3 +52,8 @@ cd sim-plot-ode
 
 ### SIR Epidemiological Model
 ![SIR Plot](src/main/resources/io/github/rajveer/simplotode/images/sir-plot.png)
+
+### Solar System Model
+![Mercury-Position Plot](src/main/resources/io/github/rajveer/simplotode/images/mercury-pos-plot.png) 
+![Earth-Position Plot](src/main/resources/io/github/rajveer/simplotode/images/earth-pos-plot.png)
+
