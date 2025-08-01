@@ -4,27 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6608fd36-3a9d-48d1-9d8d-4271b28ab7ac" name="Changes" comment="" />
+    <list default="true" id="6608fd36-3a9d-48d1-9d8d-4271b28ab7ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/simulations/SolarSystemSim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/systems/SolarSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/io.github.rajveer.simplotode/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/images/fhn-plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/fhn-plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/images/lotka-volterra-plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/lotka-volterra-plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/images/sir-plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/sir-plot.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "muichi-mon"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;muichi-mon&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/muichi-mon/sim-plot-ode.git",
-    "accountId": "82bf0ce4-dfce-4dd2-9271-72d35a1afb09"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/muichi-mon/sim-plot-ode.git&quot;,
+    &quot;accountId&quot;: &quot;82bf0ce4-dfce-4dd2-9271-72d35a1afb09&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -32,9 +52,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="30bcqyJtFznynkYp8DwfYQuIPfy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,23 +64,34 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.FitzHughNagumoSim.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
     "Application.LotkaVolterraSim.executor": "Run",
     "Application.SIRSim.executor": "Run",
+    "Application.SolarSystemSim.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Programming/Projects/sim-plot-ode/src/main/java/io/github/rajveer/simplotode/systems"
+    "last_opened_file_path": "D:/Programming/Projects/sim-plot-ode/src/main/resources"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources" />
       <recent name="D:\Programming\Projects\sim-plot-ode\src\main\java\io\github\rajveer\simplotode\systems" />
       <recent name="D:\Programming\Projects\sim-plot-ode\src\main\java\io\github\rajveer\simplotode\simulations" />
       <recent name="D:\Programming\Projects\sim-plot-ode\src\main\java\io\github\rajveer\simplotode\ode" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources" />
+      <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources\io.github.rajveer.simplotode\images" />
+      <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources\io.github.rajveer.simplotode" />
+      <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources\io\github\rajveer\simplotode" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.github.rajveer.simplotode" />
+      <recent name="io.github.rajveer.simplotode.simulations" />
       <recent name="io.github.rajveer.simplotode.systems" />
       <recent name="io.github.rajveer.simplotode.utils" />
     </key>
