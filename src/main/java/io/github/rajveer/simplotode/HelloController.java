@@ -61,6 +61,28 @@ public class HelloController {
     }
 
     @FXML
+    void onClear() {
+        // Clear stored data
+        expressions.clear();
+        initialValues.clear();
+
+        // Clear chart
+        lineChart.getData().clear();
+
+        // Clear UI fields
+        expressionField.clear();
+        y0Field.clear();
+        t0Field.clear();
+        dtField.clear();
+        tEndField.clear();
+        solverBox.getSelectionModel().clearSelection();
+
+        // Reset info label
+        infoLabel.setText("🧹 Cleared. You can start fresh!");
+    }
+
+
+    @FXML
     public void onSolve() {
         try {
             // Select solver

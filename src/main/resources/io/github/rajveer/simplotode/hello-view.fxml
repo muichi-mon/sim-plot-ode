@@ -40,6 +40,8 @@
       <children>
           <Button fx:id="addButton" mnemonicParsing="false" onAction="#onAdd" prefHeight="26.0" prefWidth="64.0" text="Add" />
           <Region HBox.hgrow="ALWAYS" />
+          <Button onAction="#onClear" text="Clear" />
+          <Region prefWidth="10" />
           <Button onAction="#onSolve" text="Solve and Plot" />
       </children>
    </HBox>
@@ -52,6 +54,6 @@
             <NumberAxis label="y(t)" />
         </yAxis>
     </LineChart>
-   <TextArea fx:id="infoLabel" prefHeight="100" prefWidth="Infinity" />
+   <TextArea fx:id="infoLabel" prefHeight="110" prefWidth="Infinity" />
 
 </VBox>

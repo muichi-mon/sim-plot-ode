@@ -94,3 +94,5 @@ We want to solve the following ODE system:
 - Click ✅ **Solve**
 
 ---
+### GUI
+![GUI](src/main/resources/io/github/rajveer/simplotode/images/GUI.png)
