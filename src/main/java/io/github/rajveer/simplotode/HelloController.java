@@ -49,7 +49,8 @@ public class HelloController {
             expressions.add(exprStr);
             initialValues.add(y0);
 
-            infoLabel.setText("Added: dy/dt = " + exprStr + " with y₀ = " + y0);
+            infoLabel.setText("Added: dy/dt = " + exprStr + " | y₀ = " + y0 +
+                    "\nTotal ODEs: " + expressions.size());
 
             expressionField.clear();
             y0Field.clear();
@@ -127,7 +128,19 @@ public class HelloController {
             }
 
             lineChart.getData().addAll(seriesList);
-            infoLabel.setText("Solved system of " + n + " ODE(s)");
+            StringBuilder finalValues = new StringBuilder();
+            for (int i = 0; i < n; i++) {
+                finalValues.append("y").append(i).append("(").append(String.format("%.2f", t)).append(") = ")
+                        .append(String.format("%.4f", y.get(i))).append("\n");
+            }
+
+            infoLabel.setText(
+                    "✅ Solved " + n + " ODE(s)\n" +
+                            "Solver: " + solverBox.getValue() + "\n" +
+                            "Time range: [" + t0 + ", " + tEnd + "] with Δt = " + dt + "\n\n" +
+                            "Final values at t = " + String.format("%.2f", t - dt) + ":\n" + finalValues
+            );
+
 
         } catch (Exception e) {
             e.printStackTrace();
