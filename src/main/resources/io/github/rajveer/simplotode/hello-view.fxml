@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="io.github.rajveer.simplotode.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="io.github.rajveer.simplotode.HelloController"
+      spacing="10"
+      style="-fx-padding: 10 10 10 10;">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+
+    <HBox spacing="10">
+        <Label text="ODE (dy/dt = f(t, y)):"/>
+        <TextField fx:id="expressionField" promptText="e.g., y - t^2 + 1"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Initial Time (t₀):"/>
+        <TextField fx:id="t0Field" promptText="0.0"/>
+        <Label text="Initial Value (y₀):"/>
+        <TextField fx:id="y0Field" promptText="0.5"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Time Step (Δt):"/>
+        <TextField fx:id="dtField" promptText="0.1"/>
+        <Label text="Final Time (tₙ):"/>
+        <TextField fx:id="tEndField" promptText="2.0"/>
+    </HBox>
+
+    <Button text="Solve and Plot" onAction="#onSolve"/>
+
+    <LineChart fx:id="lineChart" title="ODE Solution"
+               createSymbols="false">
+        <xAxis>
+            <NumberAxis label="Time (t)"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="y(t)"/>
+        </yAxis>
+    </LineChart>
+
 </VBox>

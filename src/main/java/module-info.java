@@ -1,6 +1,8 @@
 module io.github.rajveer.simplotode {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
+    requires exp4j;
 
 
     opens io.github.rajveer.simplotode to javafx.fxml;

@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6608fd36-3a9d-48d1-9d8d-4271b28ab7ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/simulations/SolarSystemSim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/systems/SolarSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/io.github.rajveer.simplotode/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/rajveer/simplotode/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/images/fhn-plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/fhn-plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/images/lotka-volterra-plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/lotka-volterra-plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/images/sir-plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/sir-plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/io/github/rajveer/simplotode/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -61,21 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FitzHughNagumoSim.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.LotkaVolterraSim.executor": "Run",
-    "Application.SIRSim.executor": "Run",
-    "Application.SolarSystemSim.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Programming/Projects/sim-plot-ode/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FitzHughNagumoSim.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LotkaVolterraSim.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SIRSim.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SolarSystemSim.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programming/Projects/sim-plot-ode/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources" />
@@ -84,10 +79,10 @@
       <recent name="D:\Programming\Projects\sim-plot-ode\src\main\java\io\github\rajveer\simplotode\ode" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources\io\github\rajveer\simplotode" />
       <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources" />
       <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources\io.github.rajveer.simplotode\images" />
       <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources\io.github.rajveer.simplotode" />
-      <recent name="D:\Programming\Projects\sim-plot-ode\src\main\resources\io\github\rajveer\simplotode" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="io.github.rajveer.simplotode" />
