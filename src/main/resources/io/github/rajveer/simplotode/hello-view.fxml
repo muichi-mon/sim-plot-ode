@@ -21,11 +21,11 @@
     </HBox>
 
     <HBox spacing="10">
-        <Label text="Initial Time (t₀):" />
-        <TextField fx:id="t0Field" promptText="0.0" />
-      <Region HBox.hgrow="ALWAYS" />
         <Label text="Initial Value (y₀):" />
         <TextField fx:id="y0Field" promptText="0.5" />
+      <Region HBox.hgrow="ALWAYS" />
+        <Label text="Initial Time (t₀):" />
+        <TextField fx:id="t0Field" promptText="0.0" />
     </HBox>
 
     <HBox spacing="10">
@@ -37,7 +37,7 @@
     </HBox>
    <HBox>
       <children>
-          <Button fx:id="addButton" onAction="#onAdd" mnemonicParsing="false" prefHeight="26.0" prefWidth="64.0" text="Add" />
+          <Button fx:id="addButton" mnemonicParsing="false" onAction="#onAdd" prefHeight="26.0" prefWidth="64.0" text="Add" />
           <Region HBox.hgrow="ALWAYS" />
           <Button onAction="#onSolve" text="Solve and Plot" />
       </children>
