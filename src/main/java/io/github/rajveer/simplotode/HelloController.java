@@ -20,7 +20,7 @@ public class HelloController {
     @FXML private TextField y0Field;
     @FXML private TextField dtField;
     @FXML private TextField tEndField;
-    @FXML private Label infoLabel;
+    @FXML private TextArea infoLabel;
     @FXML private ComboBox<String> solverBox;
     @FXML private LineChart<Number, Number> lineChart;
 
@@ -134,11 +134,16 @@ public class HelloController {
                         .append(String.format("%.4f", y.get(i))).append("\n");
             }
 
+            System.out.println("✅ Solved " + n + " ODE(s)\n" +
+                    "Solver: " + solverBox.getValue() + "\n" +
+                    "Time range: [" + t0 + ", " + tEnd + "] with Δt = " + dt + "\n\n" +
+                    "📌 Final values at t = " + String.format("%.2f", tEnd) + ":\n" + finalValues);
+
             infoLabel.setText(
                     "✅ Solved " + n + " ODE(s)\n" +
                             "Solver: " + solverBox.getValue() + "\n" +
                             "Time range: [" + t0 + ", " + tEnd + "] with Δt = " + dt + "\n\n" +
-                            "Final values at t = " + String.format("%.2f", t - dt) + ":\n" + finalValues
+                            "📌 Final values at t = " + String.format("%.2f", tEnd) + ":\n" + finalValues
             );
 
 
