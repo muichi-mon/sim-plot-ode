@@ -1,18 +1,17 @@
 package io.github.rajveer.simplotode;
 
-import io.github.rajveer.simplotode.ode.EulerSolver;
-import io.github.rajveer.simplotode.ode.ODESolver;
+import io.github.rajveer.simplotode.ode.*;
 import io.github.rajveer.simplotode.systems.ODESystem;
 import io.github.rajveer.simplotode.utils.Vector;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
-import java.util.Stack;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HelloController {
 
@@ -21,90 +20,126 @@ public class HelloController {
     @FXML private TextField y0Field;
     @FXML private TextField dtField;
     @FXML private TextField tEndField;
+    @FXML private Label infoLabel;
+    @FXML private ComboBox<String> solverBox;
     @FXML private LineChart<Number, Number> lineChart;
 
-    private final ODESolver solver = new EulerSolver(); // Replace with any ODESolver
+    private ODESolver solver;
+
+    private final List<String> expressions = new ArrayList<>();
+    private final List<Double> initialValues = new ArrayList<>();
+
+    @FXML
+    public void initialize() {
+        solverBox.getItems().addAll("Euler Solver", "RK4 Solver", "Heun Solver", "Ralston Solver");
+        infoLabel.setText("ODE Description");
+    }
+
+    @FXML
+    void onAdd() {
+        try {
+            String exprStr = expressionField.getText().trim();
+            double y0 = Double.parseDouble(y0Field.getText().trim());
+
+            if (exprStr.isEmpty()) {
+                infoLabel.setText("Expression is empty!");
+                return;
+            }
+
+            expressions.add(exprStr);
+            initialValues.add(y0);
+
+            infoLabel.setText("Added: dy/dt = " + exprStr + " with y₀ = " + y0);
+
+            expressionField.clear();
+            y0Field.clear();
+
+        } catch (NumberFormatException e) {
+            infoLabel.setText("Invalid y₀ value");
+        }
+    }
 
     @FXML
     public void onSolve() {
         try {
-            double t0 = Double.parseDouble(t0Field.getText());
-            double y0 = Double.parseDouble(y0Field.getText());
-            double dt = Double.parseDouble(dtField.getText());
-            double tEnd = Double.parseDouble(tEndField.getText());
-            String exprStr = expressionField.getText();
+            // Select solver
+            switch (solverBox.getValue()) {
+                case "Euler Solver" -> solver = new EulerSolver();
+                case "RK4 Solver" -> solver = new RK4Solver();
+                case "Heun Solver" -> solver = new HeunSolver();
+                case "Ralston Solver" -> solver = new RalstonSolver();
+                default -> throw new IllegalArgumentException("Unknown solver: " + solverBox.getValue());
+            }
 
-            Expression expr = new ExpressionBuilder(exprStr)
-                    .variables("t", "y")
-                    .build();
+            // Time parameters
+            double t0 = Double.parseDouble(t0Field.getText().trim());
+            double dt = Double.parseDouble(dtField.getText().trim());
+            double tEnd = Double.parseDouble(tEndField.getText().trim());
 
+            // Build expression array
+            int n = expressions.size();
+            if (n == 0) {
+                infoLabel.setText("No ODEs added. Use 'Add' first.");
+                return;
+            }
+
+            Expression[] exprArr = new Expression[n];
+            for (int i = 0; i < n; i++) {
+                exprArr[i] = new ExpressionBuilder(expressions.get(i))
+                        .variables("t")
+                        .variables(buildYVariables(n))
+                        .build();
+            }
+
+            // Define system
             ODESystem system = (t, y) -> {
-                expr.setVariable("t", t);
-                expr.setVariable("y", y.get(0));
-                return new Vector(new double[]{expr.evaluate()});
+                double[] result = new double[n];
+                for (int i = 0; i < n; i++) {
+                    exprArr[i].setVariable("t", t);
+                    for (int j = 0; j < n; j++) {
+                        exprArr[i].setVariable("y" + j, y.get(j));
+                    }
+                    result[i] = exprArr[i].evaluate();
+                }
+                return new Vector(result);
             };
 
-            lineChart.getData().clear();
-            XYChart.Series<Number, Number> series = new XYChart.Series<>();
-            series.setName("y(t)");
-
+            // Initial values
+            Vector y = new Vector(initialValues.stream().mapToDouble(Double::doubleValue).toArray());
             double t = t0;
-            Vector y = new Vector(new double[]{y0});
+
+            // Prepare chart
+            lineChart.getData().clear();
+            List<XYChart.Series<Number, Number>> seriesList = new ArrayList<>();
+            for (int i = 0; i < n; i++) {
+                XYChart.Series<Number, Number> series = new XYChart.Series<>();
+                series.setName("y" + i + "(t)");
+                seriesList.add(series);
+            }
+
+            // Solve and plot
             while (t <= tEnd) {
-                series.getData().add(new XYChart.Data<>(t, y.get(0)));
+                for (int i = 0; i < n; i++) {
+                    seriesList.get(i).getData().add(new XYChart.Data<>(t, y.get(i)));
+                }
                 y = solver.step(system, t, y, dt);
                 t += dt;
             }
 
-            lineChart.getData().add(series);
+            lineChart.getData().addAll(seriesList);
+            infoLabel.setText("Solved system of " + n + " ODE(s)");
 
         } catch (Exception e) {
             e.printStackTrace();
+            infoLabel.setText("Error: " + e.getMessage());
         }
     }
 
-
-    /**
-     * checks if the String ODE function has balanced parenthesis
-     * @param expression String ODE function
-     * @return boolean
-     */
-    public static boolean isBalanced(String expression) {
-        Stack<Character> stack = new Stack<>();
-
-        for (char ch : expression.toCharArray()) {
-
-            if (ch == '(' || ch == '[' || ch == '{') {
-                stack.push(ch);
-            }
-
-            else if (ch == ')' || ch == ']' || ch == '}') {
-                if (stack.isEmpty()) {
-                    return false; // Unmatched closing bracket
-                }
-                char topElement = stack.pop(); // Get the most recent opening bracket
-
-                if ((ch == ')' && topElement != '(') ||
-                        (ch == ']' && topElement != '[') ||
-                        (ch == '}' && topElement != '{')) {
-                    return false;
-                }
-            }
+    private String[] buildYVariables(int n) {
+        String[] vars = new String[n];
+        for (int i = 0; i < n; i++) {
+            vars[i] = "y" + i;
         }
-
-        return stack.isEmpty();
+        return vars;
     }
-
-    /**
-     * Create quick Alert pop-ups
-     * @param message Warning message
-     */
-    public static void showAlertBox(String message) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Invalid Selection");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
-
 }

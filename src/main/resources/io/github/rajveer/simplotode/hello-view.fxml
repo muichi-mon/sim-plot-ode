@@ -1,45 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="io.github.rajveer.simplotode.HelloController"
-      spacing="10"
-      style="-fx-padding: 10 10 10 10;">
+<VBox spacing="10" style="-fx-padding: 10 10 10 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.rajveer.simplotode.HelloController">
 
 
     <HBox spacing="10">
-        <Label text="ODE (dy/dt = f(t, y)):"/>
-        <TextField fx:id="expressionField" promptText="e.g., y - t^2 + 1"/>
+        <Label text="ODE (dy/dt = f(t, y)):" />
+        <TextField fx:id="expressionField" promptText="e.g., y - t^2 + 1" />
+      <Region HBox.hgrow="ALWAYS" />
+      <ComboBox fx:id="solverBox" prefWidth="150.0" promptText="Solver" />
     </HBox>
 
     <HBox spacing="10">
-        <Label text="Initial Time (t₀):"/>
-        <TextField fx:id="t0Field" promptText="0.0"/>
-        <Label text="Initial Value (y₀):"/>
-        <TextField fx:id="y0Field" promptText="0.5"/>
+        <Label text="Initial Time (t₀):" />
+        <TextField fx:id="t0Field" promptText="0.0" />
+      <Region HBox.hgrow="ALWAYS" />
+        <Label text="Initial Value (y₀):" />
+        <TextField fx:id="y0Field" promptText="0.5" />
     </HBox>
 
     <HBox spacing="10">
-        <Label text="Time Step (Δt):"/>
-        <TextField fx:id="dtField" promptText="0.1"/>
-        <Label text="Final Time (tₙ):"/>
-        <TextField fx:id="tEndField" promptText="2.0"/>
+        <Label text="Time Step (Δt):" />
+        <TextField fx:id="dtField" promptText="0.1" />
+      <Region HBox.hgrow="ALWAYS" />
+        <Label text="Final Time (tₙ):" />
+        <TextField fx:id="tEndField" promptText="2.0" />
     </HBox>
+   <HBox>
+      <children>
+          <Button fx:id="addButton" onAction="#onAdd" mnemonicParsing="false" prefHeight="26.0" prefWidth="64.0" text="Add" />
+          <Region HBox.hgrow="ALWAYS" />
+          <Button onAction="#onSolve" text="Solve and Plot" />
+      </children>
+   </HBox>
 
-    <Button text="Solve and Plot" onAction="#onSolve"/>
-
-    <LineChart fx:id="lineChart" title="ODE Solution"
-               createSymbols="false">
+    <LineChart fx:id="lineChart" createSymbols="false" title="ODE Solution">
         <xAxis>
-            <NumberAxis label="Time (t)"/>
+            <NumberAxis label="Time (t)" />
         </xAxis>
         <yAxis>
-            <NumberAxis label="y(t)"/>
+            <NumberAxis label="y(t)" />
         </yAxis>
     </LineChart>
+   <Label fx:id="infoLabel" alignment="TOP_LEFT" prefHeight="63.0" prefWidth="506.0" />
 
 </VBox>
